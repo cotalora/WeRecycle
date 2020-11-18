@@ -1,0 +1,21 @@
+<ion-content style="margin-bottom: 10%;">
+  <div expand="block" class="buttonBack" color="transparent" (click)="inicio()">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+  </div>
+  <div class="messs">
+    <ion-label>Generar código de canjeo</ion-label>
+  </div>
+  <div class="space"></div>
+  <div class="conte">
+    <ion-card [ngClass]="{'selected-color' : incentivo.id_incentivo==selectedIndex}" class="card" *ngFor = "let incentivo of incentivos" (click)="selectCard(incentivo.id_incentivo)">
+      <ion-card-header>
+        <ion-card-title class="title">{{incentivo.nombre_incentivo}}</ion-card-title>
+        <ion-icon class="min" name="remove-circle-outline"></ion-icon>
+        <ion-card-subtitle class="punt">Resta -{{incentivo.valor}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-img src='{{incentivo.imagen}}'></ion-img>
+      <ion-card-content class="punt">{{incentivo.descripsion_incentivo}}</ion-card-content>
+    </ion-card>  
+  </div>
+</ion-content>
+<ion-button color="claro fontBlack" class="buttonLogin" (click)="generarCodigo()">Generar</ion-button>

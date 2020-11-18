@@ -1,0 +1,24 @@
+<ion-content>
+  <div class="buttonBack" color="transparent" (click)="login()" >
+    <ion-icon name="arrow-back-outline"></ion-icon>
+  </div>
+  <ion-img class="profile" src="assets/images/logo.png"></ion-img>
+  <div class="conte">
+    <div class="mess">
+      <ion-label>Por favor escriba su nueva contraseña.</ion-label>
+    </div>
+    <ion-item class="roundItem"  lines="none" color="transparent">
+      <ion-icon class="iconLogin" name="key-outline"></ion-icon>
+      <ion-input class="input" type="password" placeholder="Contraseña" [(ngModel)]="contrasena" (keypress)="pass($event)" onPaste="return false"></ion-input>
+    </ion-item>
+    <div class="lin" [ngClass]="{'medium-color' : contrasena.length>=12, 'low-color': contrasena.length < 12 && contrasena.length > 0,
+      'high-color': (contrasena.includes('@') == true || contrasena.includes('@') == true || contrasena.includes('-') == true || contrasena.includes('*') == true || contrasena.includes('?') == true ||
+      contrasena.includes('!') == true || contrasena.includes('#') == true ||contrasena.includes('$') == true || contrasena.includes('/') == true || contrasena.includes('(') == true || contrasena.includes(')') == true ||
+      contrasena.includes('{') == true || contrasena.includes('}') == true || contrasena.includes('_') == true) && contrasena.length >= 12}"></div>  
+    <ion-item class="roundItem"  lines="none" color="transparent">
+      <ion-icon class="iconLogin" name="key-outline"></ion-icon>
+      <ion-input class="input" placeholder="Verificación" type="password" [(ngModel)]="confirmaContrasena" (keypress)="pass($event)"  onPaste="return false"></ion-input>
+    </ion-item>
+    <ion-button color="claro fontBlack" class="buttonLogin" (click)="cambioContrasena()">Aceptar</ion-button>
+  </div>
+</ion-content>

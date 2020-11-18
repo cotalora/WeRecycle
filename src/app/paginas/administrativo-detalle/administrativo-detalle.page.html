@@ -1,0 +1,78 @@
+<ion-content>
+  <div expand="block" class="buttonBack" color="transparent" (click)="goToInicio()">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+  </div>
+  <ion-img class="profile" src="assets/images/logo.png"></ion-img>
+  <ion-item class="pApellido" lines="none" color="transparent">
+    <ion-label class="lab" position="floating">Primer nombre *</ion-label>
+    <ion-input type="text" maxlength="20" class="input" [(ngModel)]="pNombre" (keypress)="letter($event)" onPaste="return false" ></ion-input>
+  </ion-item>
+  <ion-item class="sApellido" lines="none" color="transparent">
+    <ion-label class="lab" position="floating">Segundo nombre</ion-label>
+    <ion-input type="text" maxlength="20" class="input" [(ngModel)]="sNombre" (keypress)="letter($event)" onPaste="return false"></ion-input>
+  </ion-item>
+  <ion-item class="pApellido" lines="none" color="transparent">
+    <ion-label class="lab" position="floating">Primer apellido *</ion-label>
+    <ion-input type="text" maxlength="20" class="input" [(ngModel)]="pApellido" (keypress)="letter($event)" onPaste="return false"></ion-input>
+  </ion-item>
+  <ion-item class="sApellido" lines="none" color="transparent">
+    <ion-label class="lab" position="floating">Segundo apellido</ion-label>
+    <ion-input type="text" maxlength="20" class="input" [(ngModel)]="sApellido" (keypress)="letter($event)" onPaste="return false"></ion-input>
+  </ion-item>
+  <ion-item class="tipDoc" lines="none" color="transparent">
+    <ion-label class="lab">Tipo de documento *</ion-label>
+    <ion-select class="inp" okText="Aceptar" cancelText="Cancelar" [(ngModel)]="tipDoc">
+      <ion-select-option *ngFor = "let tipoDocumento of tipoDocumentos" value="{{tipoDocumento.idTipoDocumentos}}">{{tipoDocumento.tipoDocumentos}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item class="numDoc" lines="none" color="transparent">
+    <ion-label class="lab" position="floating">Número de documento *</ion-label>
+    <ion-input type="text" maxlength="20" class="input" [(ngModel)]="numDoc" (keypress)="number($event)" onPaste="return false"></ion-input>
+  </ion-item>
+  <ion-item class="numDoc" lines="none" color="transparent">
+    <ion-label class="lab" position="floating">Código *</ion-label>
+    <ion-input type="text" maxlength="20" class="input" [(ngModel)]="codigo" (keypress)="number($event)" onPaste="return false"></ion-input>
+  </ion-item>
+  <ion-item class="numDoc" lines="none" color="transparent">
+    <ion-label class="lab" position="floating">Correo institucional *</ion-label>
+    <ion-input type="email" maxlength="40" class="input" [(ngModel)]="correo" (keypress)="email($event)" onPaste="return false"></ion-input>
+  </ion-item>
+  <ion-item class="numDoc" lines="none" color="transparent">
+    <ion-label class="lab" position="floating">Contraseña *</ion-label>
+    <ion-input type="password" class="input" (keypress)="pass($event)" onPaste="return false" [(ngModel)]="contrasena"></ion-input>
+  </ion-item>
+  <div class="lin" [ngClass]="{'medium-color' : contrasena.length>=12, 'low-color': contrasena.length < 12 && contrasena.length > 0,
+    'high-color': (contrasena.includes('@') == true || contrasena.includes('@') == true || contrasena.includes('-') == true || contrasena.includes('*') == true || contrasena.includes('?') == true ||
+    contrasena.includes('!') == true || contrasena.includes('#') == true ||contrasena.includes('$') == true || contrasena.includes('/') == true || contrasena.includes('(') == true || contrasena.includes(')') == true ||
+    contrasena.includes('{') == true || contrasena.includes('}') == true || contrasena.includes('_') == true) && contrasena.length >= 12}"></div>  
+  <ion-item class="tipDoc" lines="none" color="transparent">
+    <ion-label class="lab">Departamento *</ion-label>
+    <ion-select class="inp" okText="Aceptar" cancelText="Cancelar" [(ngModel)]="departamento" (ionChange)="municipio=''">
+      <ion-select-option *ngFor = "let nombreDepartamento of nombreDepartamentos" value="{{nombreDepartamento.idDepartamento}}" >{{nombreDepartamento.nombreDepartamentos}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item class="tipDoc" lines="none" color="transparent" (click)="getMunicipio(departamento)">
+    <ion-label class="lab">Municipio *</ion-label>
+    <ion-select class="inp" okText="Aceptar" cancelText="Cancelar" [(ngModel)]="municipio">
+      <ion-select-option *ngFor = "let nombreMunicipio of nombreMunicipios" value="{{nombreMunicipio.idMunicipio}}">{{nombreMunicipio.nombreMunicipios}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item class="numDoc" lines="none" color="transparent">
+    <ion-label class="lab" position="floating">Dirección *</ion-label>
+    <ion-input type="text" maxlength="20" class="input" [(ngModel)]="direccion" (keypress)="direc($event)" onPaste="return false"></ion-input>
+  </ion-item>
+  <ion-item class="numDoc" lines="none" color="transparent">
+    <ion-label class="lab">Fecha de nacimiento *</ion-label>
+    <ion-datetime class="inp" displayFormat="YYYY/MM/DD" [(ngModel)]="fechaNacimiento" doneText="Aceptar" cancelText="Cancelar"
+      ></ion-datetime>
+  </ion-item>
+  <ion-item class="numDoc" lines="none" color="transparent">
+    <ion-label class="lab">Género *</ion-label>
+    <ion-select class="inp" okText="Aceptar" cancelText="Cancelar" [(ngModel)]="genero">
+      <ion-select-option value="2">Femenino</ion-select-option>
+      <ion-select-option value="1">Masculino</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-button color="claro fontBlack" class="buttonLogin" (click)="tryUpdate()">Actualizar</ion-button>
+  <ion-button color="oscuro" class="buttonLogin" (click)="presentAlert(id)">Inhabilitar cuenta</ion-button>
+</ion-content>

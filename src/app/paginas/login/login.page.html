@@ -1,0 +1,23 @@
+<ion-content>
+  <ion-img class="profile" src="assets/images/logo.png"></ion-img>
+  <div class="conte">
+    <ion-item class="roundItem" lines="none" color="transparent">
+      <ion-icon class="iconLogin" name="mail-outline"></ion-icon>
+      <ion-input class="input"  placeholder="Correo" maxlength="40" [(ngModel)]="correo" (keypress)="press($event)" onPaste="return false" ></ion-input>
+    </ion-item>
+    <ion-item class="roundItem" lines="none" color="transparent">
+      <ion-icon class="iconLogin" name="key-outline"></ion-icon>
+      <ion-input name="password" [type]="passwordType" class="input" type="password" placeholder="Contraseña"  [(ngModel)]="contrasena" (keypress)="pass($event)" onPaste="return false"></ion-input>
+      <ion-icon item-end [name]="passwordIcon" class="passwordIcon" (click)='hideShowPassword()'></ion-icon>
+    </ion-item>
+    <a class="enlace" (click)="openRecuperar()">¿Olvidaste tu contraseña?</a>
+    <ion-button color="claro fontBlack" class="buttonLogin" (click)="tryLogin()">Entrar</ion-button>
+    <div class="lineTot">
+      <div class="lineOr"></div>
+      <p class="or">o</p>
+      <div class="lineOr2"></div>
+    </div>
+    <ion-button color="oscuro" class="buttonLogin buttonMargin" (click)="openRegister()">Registrarse</ion-button>
+  </div>
+</ion-content>
+

@@ -1,0 +1,59 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <svg class="shadow" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 718.409 108.433" enable-background="new 0 0 718.409 108.433" xml:space="preserve">
+      <path fill="#127322" d="M-0.205,88.09c205.156,24.096,203.85,39.689,414.693-4.889C625.331,38.623,630,107.228,718,74.698V0.277H0"/>
+      <image class="imag" x="10%" xlink:href="assets/images/logo.png"></image>
+      <g (click)="presentAlert()">
+        <image class="out" y="20" x="20" xlink:href="assets/images/signs.svg"></image>
+      </g>
+    </svg>
+  </ion-toolbar>
+</ion-header>
+
+<div class="ion-page">
+  <ion-content>
+    <div class="space"></div>
+    <ion-card class="card" *ngFor = "let reciduo of reciduos">
+      <ion-card-header>
+        <ion-card-title class="title">{{reciduo.nombre_residuo}}</ion-card-title>
+        <ion-icon class="ico" name="ribbon-outline"></ion-icon>
+        <ion-card-subtitle class="punt">Suma +{{reciduo.puntos}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-img src='{{reciduo.imagen}}'></ion-img>
+      <ion-card-content class="punt">{{reciduo.descripcion_residuo}}</ion-card-content>
+    </ion-card>
+    <div class="botm"></div>
+  </ion-content>
+</div>
+<div class="headse">
+
+  <ion-fab-button tran class="usu" (click)="goActividadUsuarios()">
+    <ion-icon class="iconed" name="people-circle-outline"></ion-icon>
+  </ion-fab-button>
+  <ion-label class="labus">Usuarios</ion-label>
+
+  <ion-fab-button tran class="edit" (click)="goToDetails()">
+    <ion-icon class="iconed" name="create-outline"></ion-icon>
+  </ion-fab-button>
+  <ion-label class="labed">Editar</ion-label>
+
+  <ion-fab-button class="adm" (click)="goActividadAdministrativos()">
+    <ion-icon class="iconed" name="list-circle-outline"></ion-icon>
+  </ion-fab-button>
+  <ion-label class="labad">Admins</ion-label>
+
+  <ion-fab-button class="can" (click)="goCodigosCanjeo()">
+    <ion-icon class="iconed" name="reload-circle-outline"></ion-icon>
+  </ion-fab-button>
+  <ion-label class="labcc">P. Canjeo</ion-label>
+
+  <ion-fab-button class="sum" (click)="goCodigosSumaPuntos()">
+    <ion-icon class="iconed" name="add-circle-outline"></ion-icon>
+  </ion-fab-button>
+  <ion-label class="labcs">P. Suma</ion-label>
+
+  <ion-fab-button class="creadm" (click)="goToCrearAdministrativo()">
+    <ion-icon class="iconed" name="person-add-outline"></ion-icon>
+  </ion-fab-button>
+  <ion-label class="labca">Crear</ion-label>
+</div>

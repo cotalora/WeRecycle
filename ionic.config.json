@@ -1,0 +1,8 @@
+{
+  "name": "WeRecycle",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

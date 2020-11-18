@@ -1,0 +1,26 @@
+<ion-content>
+  <div expand="block" class="buttonBack" color="transparent" (click)="inicio()">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+  </div>
+  <div class="messs">
+    <ion-label>Generar código de canjeo</ion-label>
+  </div>
+  <div class="space"></div>
+  <ion-item class="roundItem" color="transparent" lines="none">
+    <ion-icon class="iconLogin" name="person-outline"></ion-icon>
+    <ion-input class="input" maxlength="20" placeholder="Número de documento" [(ngModel)]="documento" (keypress)="number($event)" onPaste="return false"></ion-input>
+  </ion-item>
+
+  <div class="conte">
+    <ion-card [ngClass]="{'selected-color' : reciduo.id_residuo==selectedIndex}" class="card" *ngFor = "let reciduo of reciduos" (click)="selectCard(reciduo.id_residuo)">
+      <ion-card-header>
+        <ion-card-title class="title">{{reciduo.nombre_residuo}}</ion-card-title>
+        <ion-icon class="min" name="ribbon-outline"></ion-icon>
+        <ion-card-subtitle class="punt">Suma +{{reciduo.puntos}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-img src='{{reciduo.imagen}}'></ion-img>
+      <ion-card-content class="punt">{{reciduo.descripcion_residuo}}</ion-card-content>
+    </ion-card>  
+  </div>
+</ion-content>
+<ion-button color="claro fontBlack" class="buttonLogin" (click)="generarCodigo()">Generar</ion-button>

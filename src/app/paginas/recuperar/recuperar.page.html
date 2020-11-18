@@ -1,0 +1,17 @@
+<ion-content>
+  <div class="buttonBack" color="transparent" (click)="login()">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+  </div>
+  <ion-img class="profile" src="assets/images/logo.png"></ion-img>
+  <div class="conte">
+    <ion-item class="roundItem" lines="none" color="transparent">
+      <ion-icon class="iconLogin" name="mail-outline"></ion-icon>
+      <ion-input class="input" [(ngModel)]="email" (keypress)="press($event)" onPaste="return false"></ion-input>
+    </ion-item>
+    <div class="mess">
+      <ion-label>Te enviaremos un correo con el código para que cambies tu contraseña.</ion-label>
+    </div>
+    <ion-button color="claro fontBlack" class="buttonLogin" (click)="sendEmail()">Enviar</ion-button>
+  </div>
+</ion-content>
+

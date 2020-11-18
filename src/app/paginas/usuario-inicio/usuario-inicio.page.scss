@@ -1,0 +1,140 @@
+.img {
+    margin-bottom: 3%;;
+    margin-top: 3%;
+}
+.heade {
+    position: absolute;
+    width: 100%;
+}
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+    margin-bottom: 5%;
+}
+.space {
+    margin-top: 20%;
+}
+.botm {
+    margin-bottom: 20%;
+}
+.shadow {
+    -webkit-filter: drop-shadow( 4px 4px 3px black);
+    filter: drop-shadow( 4px 4px 3px black);
+}
+.headse {
+    height: 10vmax;
+    position: absolute;
+    width: 100%;
+    background-color: #28282A;
+    bottom: 0;
+    margin: 0 auto;
+    border-radius: 50% 50% 0 0;
+}
+.botones{
+    margin-left: 18vmax;
+    align-items: center;
+}
+.title {
+    font-size: 2.5vmax;
+    color: white;
+}
+.punt {
+    font-size: 1.8vmax;
+    text-align: justify;
+    margin-top: 1.5vmax;
+}
+.card {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 0.5vmax;
+    --ion-background-color:rgb(24, 23, 27);
+}
+.icon {
+    font-size: 5vmax;
+}
+ion-header::after {
+    background-image: none;
+}
+.puntos {
+    margin: 0 auto;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 5vmax;
+    text-align: center;
+    height: 8vmax;
+    width: 8vmax;
+    --ion-color-base: #127322 !important;
+}
+.edit {
+    margin: 0 auto;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 10vmax;
+    bottom: 2vmax;
+    text-align: center;
+    height: 5vmax;
+    width: 5vmax;
+    --background: transparent;
+}
+.iconed {
+    font-size: 5vmax;
+    color: white;
+}
+.iconeed {
+    font-size: 4vmax;
+    color: white;
+}
+.chan {
+    margin: 0 auto;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    right: 10vmax;
+    bottom: 2vmax;
+    text-align: center;
+    height: 5vmax;
+    width: 5vmax;
+    --background: transparent;
+}
+.iconc {
+    font-size: 5vmax;
+    color: white;
+}
+.imag{
+    width: 35%;
+}
+.out {
+    width: 7%;
+}
+.tex {
+    font-size: 260%;
+}
+.textr {
+    font-size: 160%;
+}
+.ico {
+    float: left;
+    font-size: 3vmax;
+    margin-top: 1vmax;
+    margin-bottom: 2vmax;
+    margin-right: 1vmax;
+}
+.acti {
+    margin: 0 auto;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 3vmax;
+    bottom: 2vmax;
+    text-align: center;
+    height: 5vmax;
+    width: 5vmax;
+    --background: transparent;
+}
+ion-content{
+    --ion-background-color:#201F24;
+}

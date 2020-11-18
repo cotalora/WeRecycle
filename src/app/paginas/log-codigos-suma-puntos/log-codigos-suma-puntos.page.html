@@ -1,0 +1,20 @@
+<ion-content style="margin-bottom: 10%;">
+	<div expand="block" class="buttonBack" color="transparent" (click)="inicio()">
+	  <ion-icon name="arrow-back-outline"></ion-icon>
+	</div>
+	<div class="space"></div>
+	<div class="conte">
+		<ion-card class="card" *ngFor = "let codigo of codigos">
+			<ion-card-header>
+				<ion-card-title class="title"><strong>Usuario:</strong> {{codigo.usuario}}</ion-card-title>
+				<ion-card-subtitle class="punt"><strong>No. Documento usuario:</strong> {{this.replace(codigo.numero_documento_usuario,-1)}}</ion-card-subtitle>
+				<ion-card-title class="title"><strong>Administrativo:</strong> {{codigo.administrativo}}</ion-card-title>
+				<ion-card-subtitle class="punt"><strong>No. Documento administrativo:</strong> {{this.replace(codigo.numero_documento_administrativo,-1)}}</ion-card-subtitle>
+				<ion-card-subtitle class="punt"><strong>Código:</strong> {{codigo.token}}</ion-card-subtitle>
+				<ion-card-subtitle class="punt"><strong>Residuo:</strong> {{codigo.nombre_residuo}}</ion-card-subtitle>
+				<ion-card-subtitle class="punt"><strong>Actividad:</strong> {{codigo.actividad}}</ion-card-subtitle>
+				<ion-card-subtitle class="punt"><strong>Fecha:</strong> {{codigo.fecha_hora}}</ion-card-subtitle>
+			</ion-card-header>
+		</ion-card>  
+	</div>
+</ion-content>

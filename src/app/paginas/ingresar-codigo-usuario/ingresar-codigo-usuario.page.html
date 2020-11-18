@@ -1,0 +1,30 @@
+<ion-content>
+  <div class="buttonBack" color="transparent" (click)="inicio()">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+  </div>
+  <div class="messs">
+    <ion-label>Suma de puntos</ion-label>
+  </div>
+  <ion-img class="profile" src="assets/images/logo.png"></ion-img>
+  
+  <div class="conte">
+    <div class="mess">
+      <ion-label>Por favor escriba el código.</ion-label>
+    </div>
+    <div class="contenDiv">
+      <div class="code">
+        <ion-input class="input" #foc0 maxlength="1" [(ngModel)]="token0" (keyup)="press($event,foc1,foc0)" (keypress)="pressto($event)" onPaste="return false"></ion-input>
+      </div>
+      <div class="code">
+        <ion-input class="input" #foc1 maxlength="1" [(ngModel)]="token1" (keyup)="press($event,foc2,foc0)" (keypress)="pressto($event)" onPaste="return false"></ion-input>
+      </div>
+      <div class="code">
+        <ion-input class="input" #foc2 maxlength="1" [(ngModel)]="token2" (keyup)="press($event,foc3,foc1)" (keypress)="pressto($event)" onPaste="return false"></ion-input>
+      </div>
+      <div class="code">
+        <ion-input class="input" #foc3 maxlength="1" [(ngModel)]="token3" (keyup)="press($event,foc3,foc2)" (keypress)="pressto($event)" onPaste="return false"></ion-input>
+      </div>
+    </div>
+  </div>
+  <ion-button color="claro fontBlack" class="buttonLogin" (click)="ingresarCodigo()">Ingresar</ion-button>
+</ion-content>

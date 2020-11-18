@@ -1,0 +1,99 @@
+.profile {
+    margin-left: 20%;
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+.roundItem {
+    
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+.input{
+    margin-left: 5%;
+    font-size: 20px;
+}
+.iconLogin {
+    font-size: 32px;
+    margin-left: 1%;
+    color: #888888;
+}
+.buttonLogin {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 2%;
+    height: 7%;
+    width: 90%;
+    height: 6vmax;
+    margin-left: 5%;
+    font-size: 2vmax;
+    --border-radius: 30px !important;
+}
+ion-item {
+    --border-color: #6fbf4c;
+    --highlight-color-focused: #127322;
+}
+.ion-color-claro {
+    --ion-color-base: var(--ion-color-claro);
+    --ion-color-base-rgb: var(--ion-color-claro-rgb);
+    --ion-color-contrast: var(--ion-color-claro-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-claro-contrast-rgb);
+    --ion-color-shade: var(--ion-color-claro-shade);
+    --ion-color-tint: var(--ion-color-claro-tint);
+}
+.fontBlack {
+    font-weight: bold;
+}
+.buttonBack {
+    position: absolute;
+    --border-radius: 40%;
+    margin-left: 2%;
+    margin-top: 1%;
+    font-size: 4vmax;
+    color: white;
+}
+.card {
+    width: 44%;
+    float: left;
+    --ion-background-color:rgb(24, 23, 27);
+}
+.selected-color{
+    background-color: #127322;
+    color: white;
+    border-radius: 30px;
+}
+.conte {
+    margin-left: 5%;
+}
+.title {
+    font-size: 2.5vmax;
+    color: white;
+}
+.punt {
+    font-size: 1.8vmax;
+    margin-top: 1.5vmax;
+    text-align: justify;
+}
+.space {
+    margin-bottom: 5vmax;
+}
+.min {
+    float: left;
+    font-size: 3vmax;
+    margin-top: 1vmax;
+    margin-bottom: 2vmax;
+    margin-right: 1vmax;
+}
+.messs {
+    margin-left: 5%;
+    font-size: 2.7vmax;
+    margin-right: 5%;
+    margin-top: 12%;
+    font-weight: bold;
+    color: white;
+}
+ion-content{
+    --ion-background-color:#201F24;
+}

@@ -1,0 +1,40 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <svg class="shadow" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 718.409 108.433" enable-background="new 0 0 718.409 108.433" xml:space="preserve">
+      <path fill="#127322" d="M-0.205,88.09c205.156,24.096,203.85,39.689,414.693-4.889C625.331,38.623,630,107.228,718,74.698V0.277H0"/>
+      <image class="imag" x="10%" xlink:href="assets/images/logo.png"></image>
+      <g (click)="presentAlert()">
+        <image class="out" y="20" x="20" xlink:href="assets/images/signs.svg"></image>
+      </g>
+    </svg>
+  </ion-toolbar>
+</ion-header>
+
+<div class="ion-page">
+  <ion-content>
+    <div class="space"></div>
+    <ion-card class="card" *ngFor = "let incentivo of incentivos">
+      <ion-card-header>
+        <ion-card-title class="title">{{incentivo.nombre_incentivo}}</ion-card-title>
+        <ion-icon class="ico" name="ribbon-outline"></ion-icon>
+        <ion-card-subtitle class="punt">Suma +{{incentivo.valor}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-img src='{{incentivo.imagen}}'></ion-img>
+      <ion-card-content class="punt">{{incentivo.descripsion_incentivo}}</ion-card-content>
+    </ion-card>
+    <div class="botm"></div>
+  </ion-content>
+</div>
+<div class="headse">
+  <ion-fab-button class="puntos" color="danger" (click)="goToIngresarCodigo()">
+    <ion-icon class="icon" name="add"></ion-icon>
+  </ion-fab-button>
+
+  <ion-fab-button tran class="edit" (click)="goToEdit()">
+    <ion-icon class="iconed" name="person-circle-outline"></ion-icon>
+  </ion-fab-button>
+
+  <ion-fab-button class="chan" (click)="goToGenerarCodigo()">
+    <ion-icon class="iconc" name="reload-circle-outline"></ion-icon>
+  </ion-fab-button>
+</div>

@@ -1,0 +1,124 @@
+.profile {
+    margin-left: 20%;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+.pApellido {
+    background-color: #35363A;
+    margin-left: 5%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    height: 5.5vmax;
+    justify-content: center;
+	display: flex!important;
+ 	align-items: center!important;
+    float: left;
+    width: 44%;
+}
+.input{
+    margin-left: 5%;
+    font-size: 2.5vmax;
+    color: white;
+}
+.sApellido {
+    background-color: #35363A;
+    margin-left: 5%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    height: 5.5vmax;
+    justify-content: center;
+	display: flex!important;
+    align-items: center!important;
+    width: 44%;
+}
+.tipDoc {
+    margin-left: 5%;
+    margin-right: 4%;
+    background-color: #35363A;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    height: 5.5vmax;
+    justify-content: center;
+	display: flex!important;
+ 	align-items: center!important;
+}
+.numDoc {
+    background-color: #35363A;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    height: 5.5vmax;
+    justify-content: center;
+	display: flex!important;
+ 	align-items: center!important;
+}
+.buttonLogin {
+    margin-bottom: 2%;
+    height: 7%;
+    width: 90%;
+    height: 6vmax;
+    margin-left: 5%;
+    font-size: 2vmax;
+    --border-radius: 30px !important;
+}
+.ion-color-claro {
+    --ion-color-base: var(--ion-color-claro);
+    --ion-color-base-rgb: var(--ion-color-claro-rgb);
+    --ion-color-contrast: var(--ion-color-claro-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-claro-contrast-rgb);
+    --ion-color-shade: var(--ion-color-claro-shade);
+    --ion-color-tint: var(--ion-color-claro-tint);
+}
+.ion-color-oscuro {
+    --ion-color-base: var(--ion-color-oscuro);
+    --ion-color-base-rgb: var(--ion-color-oscuro-rgb);
+    --ion-color-contrast: var(--ion-color-oscuro-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-oscuro-contrast-rgb);
+    --ion-color-shade: var(--ion-color-oscuro-shade);
+    --ion-color-tint: var(--ion-color-oscuro-tint);
+}
+ion-item {
+    --border-color: #6fbf4c;
+    --highlight-color-focused: #127322;
+}
+ion-item.item-has-focus > ion-label {
+    color: #6fbf4c ;
+}
+.buttonBack {
+    position: absolute;
+    --border-radius: 40%;
+    margin-left: 2%;
+    margin-top: 1%;
+    font-size: 4vmax;
+    color: white;
+}
+.lab {
+    font-size: 1.8vmax;
+    color: white;
+}
+.inp {
+    font-size: 2.2vmax;
+    color: white;
+}
+ion-content{
+    --ion-background-color:#201F24;
+}
+.lin {
+    height: 0.5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 0.5%;
+    background-color: #201F24;
+}
+.medium-color {
+    background-color: yellow;
+}
+.high-color {
+    background-color: green;
+}
+.low-color {
+    background-color: red;
+}
